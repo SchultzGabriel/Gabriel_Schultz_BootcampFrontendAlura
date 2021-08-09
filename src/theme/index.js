@@ -2,11 +2,11 @@ import typographyVariants from './typographyVariants';
 
 export const colors = {
   background: {
-    light: {
-      color: '#FFFFFF',
-    },
     main: {
       color: '#000',
+    },
+    light: {
+      color: '#FFFFFF',
     },
   },
   borders: {
@@ -16,14 +16,18 @@ export const colors = {
   },
   primary: {
     main: {
-      color: '#D7385E',
-      contrastText: '#fff',
+      color: '',
+      contrastText: '#D7385E',
     },
   },
   secondary: {
     main: {
-      color: '#FB7B6B',
+      color: '#004058',
       contrastText: '#fff',
+    },
+    light: {
+      color: '#88989E',
+      contrastText: '#FF770F',
     },
   },
   tertiary: {
@@ -55,5 +59,5 @@ export default {
   breakpoints,
   borderRadius: '12px',
   transition: '200ms ease-in-out',
-  fontFamily: '\'Rubik\', sans-serif',
+  fontFamily: '\'Press Start 2P\', cursive',
 };
