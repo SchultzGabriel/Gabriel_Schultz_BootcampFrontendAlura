@@ -6,7 +6,7 @@ const ProjectWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height:87vh;
+    height:100vh;
 
     ${breakpointsMedia({
     xs: css`
@@ -70,6 +70,7 @@ ProjectWrapper.Card = styled.div`
     };
     .description{
         text-align:justify;
+        padding:1rem;
     }
 `;
 
