@@ -1,5 +1,5 @@
 import React from 'react';
-import CoverWrapper from './CoverWrapper';
+import CoverWrapper from './style/CoverWrapper';
 import Text from '../foundation/text';
 
 export default function Cover() {

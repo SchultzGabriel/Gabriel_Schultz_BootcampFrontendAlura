@@ -19,6 +19,7 @@ export default function AboutMe() {
             md: 'center',
           }}
           margin="1rem"
+          textShadow="2px 2px 2px black"
         >
           SOBRE MIM
         </Text>
@@ -38,7 +39,7 @@ export default function AboutMe() {
           <br />
           Tenho como motivação ajudar a transformar a educação
           brasileira através da tecnologia. Para isso, conto com uma sede
-          insaciável de cohecimento e a vontade de passá-lo adiante.
+          insaciável de cohecimento e a arte de ensinar para meus semelhantes.
         </Text>
       </AboutWrapper.TextArea>
     </AboutWrapper>

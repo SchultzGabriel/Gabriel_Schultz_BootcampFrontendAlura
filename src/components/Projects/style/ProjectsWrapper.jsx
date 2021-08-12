@@ -68,9 +68,6 @@ ProjectWrapper.Card = styled.div`
     .preview{
         width:100%;
     };
-    .title{
-        display: block;
-    }
     .description{
         text-align:justify;
     }

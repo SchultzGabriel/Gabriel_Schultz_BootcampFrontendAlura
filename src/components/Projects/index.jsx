@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectWrapper from './ProjectsWrapper';
+import ProjectWrapper from './style/ProjectsWrapper';
 import Text from '../foundation/text';
 
 const projects = [
@@ -64,6 +64,7 @@ export default function Cover() {
                   md: 'center',
                 }}
                 textShadow="2px 2px 2px black"
+                className="description"
               >
                 {item.description}
               </Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavWrapper from './NavWrapper';
+import NavWrapper from './style/NavWrapper';
 
 export default function Nav() {
   return (
