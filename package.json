@@ -4,10 +4,16 @@
     "dev": "next",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ignore-path .gitignore .",
+    "lint-staged": "lint-staged",
+    "commit": "cz"
   },
   "dependencies": {
     "eslint-config-next": "^11.0.1",
+    "husky": "^7.0.1",
     "lodash": "^4.17.21",
     "next": "^11.0.1",
     "prop-types": "^15.7.2",
@@ -20,12 +26,33 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^11.1.2"
   },
-  "license": "MIT"
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix"
+    ],
+    "*.jsx": [
+      "yarn lint:fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
