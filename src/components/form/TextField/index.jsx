@@ -15,8 +15,6 @@ const Input = styled(Text)`
   outline: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
   ${propToStyle('height')};
-  vertical-align: top;
-  text-align: top;
 `;
 
 Input.defaultProps = {

@@ -38,6 +38,7 @@ const ModalWrapper = styled.div`
     `,
     md: css`
     background: rgba(0,0,0,0.9);
+    overflow:scroll;
     `,
   })};
 `;
