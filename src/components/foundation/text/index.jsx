@@ -44,9 +44,11 @@ const TextBase = styled.span`
   ${propToStyle('marginBottom')}
   ${propToStyle('margin')}
   ${propToStyle('textShadow')}
+  ${propToStyle('display')}
 `;
 
 export default function Text({
+  // eslint-disable-next-line react/prop-types
   tag, variant, children, ...props
 }) {
   return (
@@ -68,7 +70,7 @@ export default function Text({
 Text.propTypes = {
   tag: PropTypes.string,
   variant: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  // children: PropTypes.node.isRequired,
 };
 
 Text.defaultProps = {

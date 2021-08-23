@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointMedia from '../../../theme/utils/breakpointMedia';
 
 const HeaderWrapper = styled.header`
 width: 100%;
@@ -6,8 +7,18 @@ background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 align-items: center;
 justify-content: space-between;
-position: absolute;
-z-index: 1;
+position: fixed;
+z-index: 5;
 padding:1rem;
+
+${breakpointMedia({
+    sm: css`
+        justify-content:center;
+        `,
+    md: css`
+    flex-wrap:wrap;
+    `,
+  })};
 `;
+
 export { HeaderWrapper as default };
