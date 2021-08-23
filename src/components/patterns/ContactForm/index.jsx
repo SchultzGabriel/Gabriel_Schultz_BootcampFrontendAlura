@@ -7,6 +7,7 @@ import Button from '../../commons/Button';
 import Form from './style';
 import errorAnimation from './animations/error.json';
 import doneAnimation from './animations/success.json';
+import loadingAnimation from './animations/loading.json';
 
 const formStates = {
   DEFAULT: 'DEFAULT',
@@ -156,7 +157,7 @@ function FormContent() {
           <Lottie
             width="150px"
             height="150px"
-            config={{ animationData: errorAnimation, loop: true, autoplay: true }}
+            config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
           />
         </Box>
         )}
