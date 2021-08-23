@@ -11,5 +11,6 @@ const Box = styled.div`
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
   ${propToStyle('backgroundSize')}
+  ${propToStyle('width')}
 `;
 export { Box as default };
