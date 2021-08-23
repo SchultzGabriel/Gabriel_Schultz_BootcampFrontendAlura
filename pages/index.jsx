@@ -6,6 +6,7 @@ import Projects from '../src/components/Projects';
 import Footer from '../src/components/Footer';
 import Modal from '../src/components/commons/Modal';
 import FormCadastro from '../src/components/patterns/ContactForm';
+import ContactButton from '../src/components/commons/ContactButton';
 
 export default function Home() {
   const [isModalOpen, setModalState] = React.useState(false);
@@ -13,8 +14,9 @@ export default function Home() {
   return (
     <>
       <Header>
-        <Nav onClick={() => { setModalState(!isModalOpen); }} isModalOpen={isModalOpen} />
+        <Nav />
       </Header>
+      <ContactButton onClick={() => { setModalState(!isModalOpen); }} isModalOpen={isModalOpen} />
       <Modal
         isOpen={isModalOpen}
         onClose={() => {

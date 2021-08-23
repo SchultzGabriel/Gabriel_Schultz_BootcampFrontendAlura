@@ -8,7 +8,7 @@ display:flex;
 align-items: center;
 justify-content: space-between;
 position: fixed;
-z-index: 5;
+z-index: 2;
 padding:1rem;
 
 ${breakpointMedia({
@@ -16,6 +16,7 @@ ${breakpointMedia({
         justify-content:center;
         `,
     md: css`
+    position: absolute;
     flex-wrap:wrap;
     `,
   })};

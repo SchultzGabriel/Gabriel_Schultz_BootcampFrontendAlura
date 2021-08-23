@@ -22,6 +22,7 @@ NavWrapper.Anchor = styled.button`
 /* margin-left: 1rem; */
 background-color: ${({ theme }) => theme.colors.secondary.main.color};
 color: ${({ theme }) => theme.colors.primary.main.contrastText};
+
 &&:hover{
     transition: ${({ theme }) => theme.transition};
     filter:opacity(.5);
@@ -37,28 +38,6 @@ ${breakpointsMedia({
     
     `,
   })};
-`;
-
-NavWrapper.Contact = styled.button`
-position: fixed;
-right: 10px;
-bottom: 10px;
-display:flex;
-align-items:center;
-border:none;
-background-color:black;
-border-radius:50px;
-transition: ${({ theme }) => theme.transition};
-
-&&:hover{
-  cursor:pointer;
-  filter:invert();
-}
-
-img{
-  width:50px;
-  filter:invert();
-}
 `;
 
 export { NavWrapper as default };

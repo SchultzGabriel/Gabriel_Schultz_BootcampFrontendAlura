@@ -81,6 +81,7 @@ function FormContent() {
           tag="h2"
           color="primary.main"
           textShadow="2px 2px 2px black"
+          margin="0"
         >
           Envie sua mensagem!
         </Text>
@@ -95,7 +96,7 @@ function FormContent() {
         </div>
         <div>
           <TextField
-            placeholder="Email"
+            placeholder="email@domínio.com"
             name="email"
             value={msgInfo.email}
             onChange={handleChange}
@@ -108,7 +109,7 @@ function FormContent() {
             name="message"
             value={msgInfo.message}
             onChange={handleChange}
-            type="text"
+            type="textarea"
             height="100px"
           />
         </div>
@@ -118,7 +119,7 @@ function FormContent() {
           disabled={isFormInvalid}
           fullWidth
         >
-          Contate!
+          Enviar!
         </Button>
         {isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
