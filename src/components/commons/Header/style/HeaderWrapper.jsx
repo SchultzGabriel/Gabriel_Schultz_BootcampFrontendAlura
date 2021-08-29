@@ -7,7 +7,7 @@ background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 align-items: center;
 justify-content: space-between;
-position: fixed;
+/* position: fixed; */
 z-index: 2;
 padding:1rem;
 

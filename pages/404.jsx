@@ -1,11 +1,11 @@
 import React from 'react';
-import Cover from '../src/components/Cover';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
+import Erro404 from '../src/components/screens/404';
 
 function Home() {
   return (
     <>
-      <Cover />
+      <Erro404 />
     </>
   );
 }

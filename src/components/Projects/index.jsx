@@ -26,7 +26,7 @@ const projects = [
 export default function Cover() {
   return (
     <ProjectWrapper
-      backgroundImage="url(/images/projectsBackground.jpg)"
+      // backgroundImage="url(/images/projectsBackground.jpg)"
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
