@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import breakpointMedia from '../../../theme/utils/breakpointMedia';
+import breakpointMedia from '../../../../theme/utils/breakpointMedia';
 
 const HeaderWrapper = styled.header`
 width: 100%;

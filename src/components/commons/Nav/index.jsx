@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import NavWrapper from './style/NavWrapper';
-import Link from '../foundation/link';
+import Link from '../../foundation/link';
 // import Button from '../commons/Button';
 
 // eslint-disable-next-line react/prop-types

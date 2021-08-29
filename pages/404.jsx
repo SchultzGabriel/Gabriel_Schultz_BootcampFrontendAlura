@@ -1,19 +1,19 @@
 import React from 'react';
+import Cover from '../src/components/Cover';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
-import AboutMe from '../src/components/aboutme';
 
-function AboutPage() {
+function Home() {
   return (
     <>
-      <AboutMe />
+      <Cover />
     </>
   );
 }
 
-export default websitePageHOC(AboutPage, {
+export default websitePageHOC(Home, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Sobre',
+      headTitle: 'Erro 404',
     },
   },
 });
