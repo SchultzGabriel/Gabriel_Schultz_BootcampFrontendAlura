@@ -6,11 +6,13 @@ const Box = styled.div`
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
+  ${propToStyle('alignItems')}
   ${propToStyle('flexWrap')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
   ${propToStyle('backgroundSize')}
   ${propToStyle('width')}
+  ${propToStyle('height')}
 `;
 export { Box as default };

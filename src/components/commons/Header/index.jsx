@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HeaderWrapper from './style/HeaderWrapper';
-import Logo from '../../theme/Logo';
+import Logo from '../../../theme/Logo';
 
 export default function Header({ children }) {
   return (

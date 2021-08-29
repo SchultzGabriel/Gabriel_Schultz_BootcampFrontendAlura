@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
 import Box from '../../foundation/layout/Box';
-import TextField from '../../form/TextField';
+import TextField from '../../commons/form/TextField';
 import Text from '../../foundation/text';
 import Button from '../../commons/Button';
 import Form from './style';
