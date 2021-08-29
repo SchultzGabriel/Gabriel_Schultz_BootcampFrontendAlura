@@ -1,11 +1,12 @@
 import React from 'react';
-import Text from '../foundation/text';
-import Box from '../foundation/layout/Box';
+import Box from '../../foundation/layout/Box';
+import Text from '../../foundation/text';
 
-export default function Cover() {
+export default function Erro404() {
   return (
+
     <Box
-      // backgroundImage="url(/images/cover.jpg)"
+      backgroundImage="url(/images/cover.jpg)"
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
@@ -24,8 +25,9 @@ export default function Cover() {
         }}
         textShadow="2px 2px 2px black"
       >
-        MEU PORTFÓLIO
+        404
       </Text>
     </Box>
+
   );
 }
