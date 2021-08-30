@@ -1,0 +1,25 @@
+{
+    "projects": [
+      {
+        "image": "https://i.imgur.com/OuW7vVT.png",
+        "title": "Instalura",
+        "description": "Em desenvolvimento durante o bootcamp de frontend avançado da Alura.",
+        "link": "https://github.com/SchultzGabriel/instalura",
+        "slug": "instalura"
+      },
+      {
+        "image": "https://i.imgur.com/2WDbNZ0.png",
+        "title": "Alurawiki",
+        "description": "Desenvolvido durante a Imersão React, ainda resolvendo alguns bugs.",
+        "link": "https://github.com/SchultzGabriel/alurawiki",
+        "slug": "alurawiki"
+      },
+      {
+        "image": "https://i.imgur.com/zr22NV7.png",
+        "title": "Aluradev",
+        "description": "Feito durante o challenge de frontend da Alura, não ficou 100% funcional e agora estou reconstruindo em ReactJS.",
+        "link": "https://github.com/SchultzGabriel/aluradev",
+        "slug": "aluradev"
+      }
+    ]
+  }

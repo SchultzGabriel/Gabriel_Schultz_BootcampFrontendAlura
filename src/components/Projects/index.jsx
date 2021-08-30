@@ -1,27 +1,9 @@
 import React from 'react';
 import ProjectWrapper from './style/ProjectsWrapper';
 import Text from '../foundation/text';
-
-const projects = [
-  {
-    name: 'Instalura',
-    description: 'Em desenvolvimento durante o bootcamp de frontend avançado da Alura.',
-    image: 'https://i.imgur.com/OuW7vVT.png',
-    link: 'https://github.com/SchultzGabriel/instalura',
-  },
-  {
-    name: 'Alurawiki',
-    description: 'Desenvolvido durante a Imersão React, ainda resolvendo alguns bugs.',
-    image: 'https://i.imgur.com/2WDbNZ0.png',
-    link: 'https://github.com/SchultzGabriel/alurawiki',
-  },
-  {
-    name: 'Aluradev',
-    description: 'Feito durante o challenge de frontend da Alura, não ficou 100% funcional e agora estou reconstruindo em ReactJS.',
-    image: 'https://i.imgur.com/zr22NV7.png',
-    link: 'https://github.com/SchultzGabriel/aluradev',
-  },
-];
+import Box from '../foundation/layout/Box';
+import Link from '../foundation/link';
+import projects from '../../../projects.json';
 
 export default function Cover() {
   return (
@@ -41,34 +23,40 @@ export default function Cover() {
         PROJETOS
       </Text>
       <div className="projects">
-        {projects.map((item) => (
+        {projects.projects.map((item) => (
           <ProjectWrapper.Card key={item.link}>
-            <a href={item.link} rel="noreferrer" target="_blank">
+            <Link href={item.slug}>
               <img className="preview" src={item.image} alt="123" />
-              <Text
-                variant="titleXS"
-                tag="h3"
-                color="tertiary.light"
-                textAlign={{
-                  md: 'center',
-                }}
-                textShadow="2px 2px 2px black"
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
               >
-                {item.name}
-              </Text>
-              <Text
-                variant="paragraph2"
-                tag="p"
-                color="tertiary.light"
-                textAlign={{
-                  md: 'center',
-                }}
-                textShadow="2px 2px 2px black"
-                className="description"
-              >
-                {item.description}
-              </Text>
-            </a>
+                <Text
+                  variant="titleXS"
+                  tag="h3"
+                  color="tertiary.light"
+                  textAlign={{
+                    md: 'center',
+                  }}
+                  textShadow="2px 2px 2px black"
+                >
+                  {item.title}
+                </Text>
+                <Text
+                  variant="paragraph2"
+                  tag="p"
+                  color="tertiary.light"
+                  textAlign={{
+                    md: 'center',
+                  }}
+                  textShadow="2px 2px 2px black"
+                  className="description"
+                >
+                  {item.description}
+                </Text>
+              </Box>
+            </Link>
           </ProjectWrapper.Card>
         ))}
       </div>
