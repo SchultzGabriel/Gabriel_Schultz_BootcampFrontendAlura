@@ -4,13 +4,12 @@ import breakpointsMedia from '../../../theme/utils/breakpointMedia';
 
 const ProjectWrapper = styled.div`
     display: flex;
+    flex-direction:column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height:100vh;
+    justify-content: right;
+    /* height:100%; */
 
     ${breakpointsMedia({
-    xs: css`
-    `,
     md: css`
     height: 100%;
     `,
@@ -22,8 +21,11 @@ const ProjectWrapper = styled.div`
 
     .projects{
         display:flex;
+        flex-direction:column;
         justify-content: space-around;
         align-items: center;
+        width:50%;
+        margin-left:auto;
 
         ${breakpointsMedia({
     xs: css`
@@ -42,6 +44,9 @@ ProjectWrapper.Card = styled.div`
     padding:1rem;
     margin:1rem;
     transition: ${({ theme }) => theme.transition};
+    display:flex;
+    flex-direction:row;
+    height:180px;
 
     ${breakpointsMedia({
     xs: css``,
@@ -53,20 +58,19 @@ ProjectWrapper.Card = styled.div`
   })}
 
     &:hover{
-        border: 1px solid green;
-        transform: scale(1.01);
+        /* border: 1px solid green; */
+        /* transform: scale(1.01); */
     }
     
     a{
         text-decoration:none;
         align-items:center;   
         display:flex;
-        flex-direction: column;
         background-color: rgba(0, 0, 0, 0.5)
     }
 
     .preview{
-        width:100%;
+        height:100%;
     };
     .description{
         text-align:justify;

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'styled-components';
+// import { useTheme } from 'styled-components';
 import Grid from '../../foundation/layout/Grid';
-import Box from '../../foundation/layout/Box';
+// import Box from '../../foundation/layout/Box';
 import Text from '../../foundation/text';
 
-export default function ProjectScreen({ category, question }) {
-  const theme = useTheme();
+export default function ProjectScreen({ project }) {
+  // const theme = useTheme();
   return (
     <Grid.Container
       flex="1"
@@ -22,38 +22,10 @@ export default function ProjectScreen({ category, question }) {
         }}
       >
         <Grid.Col
-          offset={{ sm: 0, lg: 1 }}
-          value={{ xs: 12, md: 4, lg: 4 }}
+          offset={{ sm: 0, lg: 0 }}
+          value={{ xs: 4, md: 4, lg: 12 }}
         >
-          <Text
-            variant="title"
-            color="tertiary.main"
-            marginBottom="25px"
-          >
-            Artigos
-            <br />
-            Relacionados
-          </Text>
-          <Box
-            as="ul"
-            listStyle="none"
-            padding="24px 30px"
-            backgroundColor={theme.colors.borders.main.color}
-            borderRadiusTheme
-          >
-            {category.questions.map((currentQuestion) => (
-              <Text
-                key={currentQuestion.slug}
-                as="li"
-                variant="paragraph2"
-                href={`/${currentQuestion.slug}`}
-                color="primary.main"
-                marginBottom="16px"
-              >
-                {currentQuestion.title}
-              </Text>
-            ))}
-          </Box>
+          <img src={project.image} alt="" />
         </Grid.Col>
 
         <Grid.Col
@@ -67,14 +39,14 @@ export default function ProjectScreen({ category, question }) {
             variant="title"
             color="tertiary.main"
           >
-            {question.title}
+            {project.title}
           </Text>
           <Text
             as="p"
             variant="paragraph1"
             color="tertiary.light"
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: question.description }}
+            dangerouslySetInnerHTML={{ __html: project.description }}
           />
         </Grid.Col>
       </Grid.Row>
@@ -82,15 +54,15 @@ export default function ProjectScreen({ category, question }) {
   );
 }
 
+ProjectScreen.defaultProps = {
+  project: 'undefined',
+};
+
 ProjectScreen.propTypes = {
-  category: PropTypes.shape({
-    title: PropTypes.string,
-    questions: PropTypes.arrayOf(PropTypes.shape({
-      title: PropTypes.string,
-    })),
-  }).isRequired,
-  question: PropTypes.shape({
+  project: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-  }).isRequired,
+    image: PropTypes.string,
+    slug: PropTypes.string,
+  }),
 };
