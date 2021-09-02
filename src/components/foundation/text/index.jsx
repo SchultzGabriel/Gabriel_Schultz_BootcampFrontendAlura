@@ -46,6 +46,8 @@ const TextBase = styled.span`
   ${propToStyle('margin')}
   ${propToStyle('textShadow')}
   ${propToStyle('display')}
+  ${propToStyle('fontFamily')}
+
 `;
 
 export default function Text({

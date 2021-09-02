@@ -5,7 +5,9 @@ width:100%;
 background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 justify-content: center;
-height:15vh;
+height:120px;
+position:relative;
+bottom:0;
 `;
 
 FooterWrapper.Icons = styled.div`

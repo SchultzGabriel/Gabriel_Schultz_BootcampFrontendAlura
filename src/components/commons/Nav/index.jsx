@@ -1,15 +1,45 @@
-import React from 'react';
 // import PropTypes from 'prop-types';
+import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 import NavWrapper from './style/NavWrapper';
-import Link from '../../foundation/link';
-// import Button from '../commons/Button';
+import Button from '../Button';
 
-// eslint-disable-next-line react/prop-types
-export default function Nav() {
+const links = [
+  {
+    text: 'início',
+    link: '/',
+  },
+  {
+    text: 'projetos',
+    link: '/projects',
+  },
+  {
+    text: 'sobre',
+    link: '/about',
+  },
+];
+
+const LockScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
+
+export default function Nav({ ...open }) {
+  const isMenuOpen = open.open;
   return (
-    <NavWrapper>
-      <NavWrapper.Anchor><Link href="/">início</Link></NavWrapper.Anchor>
-      <NavWrapper.Anchor><Link href="/sobre"> sobre </Link></NavWrapper.Anchor>
+    <NavWrapper open={isMenuOpen}>
+      {isMenuOpen && <LockScroll />}
+      {links.map((link) => (
+        <Button
+          href={link.link}
+          variant="primaty.main"
+          key={link.text}
+        >
+          {link.text}
+        </Button>
+
+      ))}
     </NavWrapper>
   );
 }
