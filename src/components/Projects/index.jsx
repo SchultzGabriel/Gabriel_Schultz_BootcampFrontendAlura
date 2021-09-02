@@ -7,12 +7,7 @@ import projects from '../../../projects.json';
 
 export default function Cover() {
   return (
-    <ProjectWrapper
-      // backgroundImage="url(/images/projectsBackground.jpg)"
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center"
-    >
+    <ProjectWrapper>
       <Text
         variant="title"
         tag="h2"
@@ -26,7 +21,7 @@ export default function Cover() {
         {projects.projects.map((item) => (
           <ProjectWrapper.Card key={item.link}>
             <Link href={item.slug}>
-              <img className="preview" src={item.image} alt="123" />
+              <img className="preview" src={item.image} alt="" />
               <Box
                 display="flex"
                 flexDirection="column"

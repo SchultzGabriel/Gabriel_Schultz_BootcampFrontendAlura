@@ -7,17 +7,21 @@ background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 align-items: center;
 justify-content: space-between;
-/* position: fixed; */
 z-index: 2;
 padding:1rem;
+position:absolute;
+
+div:nth-child(3){
+display:none;
+}
 
 ${breakpointMedia({
     sm: css`
-        justify-content:center;
+div:nth-child(3){
+display:flex;
+}
         `,
     md: css`
-    position: absolute;
-    flex-wrap:wrap;
     `,
   })};
 `;

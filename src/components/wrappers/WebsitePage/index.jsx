@@ -21,11 +21,11 @@ export default function WebsitePageWrapper({
   menuProps,
 }) {
   const [isModalOpen, setModalState] = React.useState(false);
+  const [isMenuOpen, setMenuState] = React.useState(false);
 
   return (
     <WebsitePageContext.Provider
       value={{
-        teste: true,
         toggleModalCadastro: () => {
           setModalState(!isModalOpen);
         },
@@ -57,8 +57,8 @@ export default function WebsitePageWrapper({
           )}
         </Modal>
         {menuProps.display && (
-          <Header>
-            <Nav />
+          <Header open={isMenuOpen} onClick={() => setMenuState(!isMenuOpen)}>
+            <Nav open={isMenuOpen} />
           </Header>
         )}
         {children}
