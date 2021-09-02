@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Lottie } from '@crello/react-lottie';
 import Box from '../../foundation/layout/Box';
 import TextField from '../../commons/form/TextField';
@@ -26,14 +26,25 @@ function FormContent() {
     message: '',
   });
 
-  function handleChange(event) {
-    const fieldName = event.target.getAttribute('name');
-    setMsgInfo({
-      ...msgInfo,
-      [fieldName]: event.target.value,
-    });
-    console.log(msgInfo);
-  }
+  // function handleChange(event) {
+  //   const fieldName = event.target.getAttribute('name');
+  //   setMsgInfo({
+  //     ...msgInfo,
+  //     [fieldName]: event.target.value,
+  //   });
+  //   console.log(msgInfo);
+  // }
+
+  const handleChange = useCallback(
+    (event) => {
+      const { name, value } = event.target;
+      setMsgInfo((state) => ({
+        ...state,
+        [name]: value,
+      }));
+    },
+    [msgInfo],
+  );
 
   const isFormInvalid = msgInfo.name.length === 0 || msgInfo.email.length === 0
   || msgInfo.message.length === 0;
