@@ -6,6 +6,7 @@ import Link from '../foundation/link';
 import projects from '../../../projects.json';
 
 export default function Cover() {
+  const [previewState, setPreviewState] = React.useState('');
   return (
     <ProjectWrapper>
       <Text
@@ -17,44 +18,55 @@ export default function Cover() {
       >
         PROJETOS
       </Text>
-      <div className="projects">
-        {projects.projects.map((item) => (
-          <ProjectWrapper.Card key={item.link}>
-            <Link href={item.slug}>
-              <img className="preview" src={item.image} alt="" />
-              <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-              >
-                <Text
-                  variant="titleXS"
-                  tag="h3"
-                  color="tertiary.light"
-                  textAlign={{
-                    md: 'center',
-                  }}
-                  textShadow="2px 2px 2px black"
+      <Box
+        display="flex"
+        width="100%"
+        justifyContent="space-around"
+      >
+        <div className="projects">
+          {projects.projects.map((item) => (
+            <ProjectWrapper.Card
+              key={item.link}
+              onMouseEnter={() => setPreviewState(item)}
+            >
+              <Link href={item.slug}>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
                 >
-                  {item.title}
-                </Text>
-                <Text
-                  variant="paragraph2"
-                  tag="p"
-                  color="tertiary.light"
-                  textAlign={{
-                    md: 'center',
-                  }}
-                  textShadow="2px 2px 2px black"
-                  className="description"
-                >
-                  {item.description}
-                </Text>
-              </Box>
-            </Link>
-          </ProjectWrapper.Card>
-        ))}
-      </div>
+                  <Text
+                    variant="titleXS"
+                    tag="h3"
+                    color="tertiary.light"
+                    textAlign={{
+                      md: 'center',
+                    }}
+                    textShadow="2px 2px 2px black"
+                  >
+                    {item.title}
+                  </Text>
+                  <Text
+                    variant="paragraph2"
+                    tag="p"
+                    color="tertiary.light"
+                    textAlign={{
+                      md: 'center',
+                    }}
+                    textShadow="2px 2px 2px black"
+                    className="description"
+                  >
+                    {item.description}
+                  </Text>
+                </Box>
+              </Link>
+            </ProjectWrapper.Card>
+          ))}
+        </div>
+        <ProjectWrapper.Preview>
+          <img className="preview" src={previewState.image} alt="" />
+        </ProjectWrapper.Preview>
+      </Box>
     </ProjectWrapper>
   );
 }
