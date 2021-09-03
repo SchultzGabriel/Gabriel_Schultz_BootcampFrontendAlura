@@ -6,10 +6,11 @@ background: url('https://img.freepik.com/vetores-gratis/paisagem-de-fundo-retro-
 display:flex;
 align-items: center;
 justify-content: space-around;
-height:100%;
+height:100vh;
 width:100%;
 padding: 1rem;
 padding-top: 100px;
+margin-left: 20%;
 
 img{
     width:50%;
@@ -22,6 +23,7 @@ ${breakpointsMedia({
     md: css`
     flex-direction: column;
     padding-top: 110px;
+    margin:0;
     
     img{
         width:100%;

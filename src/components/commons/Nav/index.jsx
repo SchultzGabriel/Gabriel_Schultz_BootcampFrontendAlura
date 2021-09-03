@@ -17,6 +17,10 @@ const links = [
     text: 'sobre',
     link: '/about',
   },
+  {
+    text: 'contato',
+    link: '/contact',
+  },
 ];
 
 const LockScroll = createGlobalStyle`

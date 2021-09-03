@@ -1,21 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointMedia from '../../../../theme/utils/breakpointMedia';
 
 const FooterWrapper = styled.footer`
 width:100%;
-background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 justify-content: center;
-height:120px;
-position:relative;
-bottom:0;
+
+${breakpointMedia({
+    sm: css`
+    width:100%;
+`,
+    md: css`
+width:50%;
+    `,
+  })};
+
 `;
 
-FooterWrapper.Icons = styled.div`
+FooterWrapper.Icon = styled.div`
 display:flex;
 align-items:center;
+justify-content: center;
+/* width:30%; */
+height:auto;
 
 a{
-    margin:1rem;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: 1rem;
 }
 a:hover{
     transition: ${({ theme }) => theme.transition};
@@ -23,9 +36,9 @@ a:hover{
 }
 
 img{
-    width: 50px;
     filter: invert();
-    
+    height: inherit;
+    width:100%;
 }
 `;
 

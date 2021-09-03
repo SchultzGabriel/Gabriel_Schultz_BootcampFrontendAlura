@@ -6,16 +6,20 @@ const ProjectWrapper = styled.div`
     padding:1rem;
     display: flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: space-around;
     position:relative;
     width:100%;
+    min-height:100vh;
     height:100%;
-    padding-top: 100px;
+    margin-left: 20%;
+
+
 
     ${breakpointsMedia({
     xs: css`
     `,
     md: css`
+    margin:0;
     `,
   })}
 
@@ -25,9 +29,9 @@ const ProjectWrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         width:50%;
-        /* margin-left:auto; */
+        margin-right:auto;
 
-        ${breakpointsMedia({
+    ${breakpointsMedia({
     xs: css`
     `,
     lg: css`
@@ -36,10 +40,11 @@ const ProjectWrapper = styled.div`
     md: css`
     padding: 1rem;
     margin:0;
-    /* width:100%; */
+    width:100%;
 
     .projects{
         height:100%;
+
     }
     `,
   })}
@@ -48,21 +53,15 @@ const ProjectWrapper = styled.div`
 
 ProjectWrapper.Card = styled.div`
     width:100%;
-    border-radius: 8px;
-    padding:1rem;
     margin:1rem;
     transition: ${({ theme }) => theme.transition};
     display:flex;
-    /* height:180px; */
 
     :first-child{
         /* background-color:blue; */
     }
 
     &:hover{
-        /* border: 1px solid green; */
-        /* transform: scale(1.01); */
-        /* background-color: #333; */
         box-shadow: 0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
@@ -81,14 +80,15 @@ ProjectWrapper.Card = styled.div`
         background-color: rgba(0, 0, 0, 0.5)
     }
 
-    .preview{
-        width:20%;
-        display:none;
-    };
     .description{
         text-align:justify;
         padding:1rem;
     }
+
+    .card__preview{
+        /* width:10%; */
+        display:none;
+    };
 
     ${breakpointsMedia({
     xs: css``,
@@ -98,14 +98,37 @@ ProjectWrapper.Card = styled.div`
     width:100%;
     height:100%;
 
-    
     a{
         flex-direction: column;
         width:100%
     }
-    .preview{
+
+    .card__preview{
+        display:flex;
         width:100%;
-    }
+    };
+    `,
+  })}
+`;
+
+ProjectWrapper.Preview = styled.div`
+
+padding:1rem;
+display: flex;
+align-self: center;
+justify-content:center;
+width:50%;
+transition: ${({ theme }) => theme.transition};
+
+.preview{
+        width:100%;
+        /* display:none; */
+    };
+
+    ${breakpointsMedia({
+    xs: css``,
+    md: css`
+    display:none;
     `,
   })}
 `;
