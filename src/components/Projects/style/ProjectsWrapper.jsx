@@ -85,6 +85,11 @@ ProjectWrapper.Card = styled.div`
         padding:1rem;
     }
 
+    .card__preview{
+        /* width:10%; */
+        display:none;
+    };
+
     ${breakpointsMedia({
     xs: css``,
     md: css`
@@ -97,6 +102,11 @@ ProjectWrapper.Card = styled.div`
         flex-direction: column;
         width:100%
     }
+
+    .card__preview{
+        display:flex;
+        width:100%;
+    };
     `,
   })}
 `;

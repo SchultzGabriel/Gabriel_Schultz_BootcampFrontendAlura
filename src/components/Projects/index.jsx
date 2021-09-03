@@ -46,6 +46,7 @@ export default function Cover() {
                   >
                     {item.title}
                   </Text>
+                  <img className="card__preview" src={item.image} alt="" />
                   <Text
                     variant="paragraph2"
                     tag="p"
