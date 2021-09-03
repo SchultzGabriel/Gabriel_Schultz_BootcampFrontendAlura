@@ -1,5 +1,5 @@
 import React from 'react';
-import Cover from '../src/components/Cover';
+import Cover from '../src/components/screens/Cover';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
 function Home() {

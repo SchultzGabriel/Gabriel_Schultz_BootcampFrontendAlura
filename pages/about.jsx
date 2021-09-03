@@ -1,6 +1,6 @@
 import React from 'react';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
-import AboutMe from '../src/components/aboutme';
+import AboutMe from '../src/components/screens/aboutme';
 
 // getRepos();
 // async function getRepos() {
