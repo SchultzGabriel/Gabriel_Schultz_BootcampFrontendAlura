@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
+import HamburgerMenu from 'react-hamburger-menu';
 import Footer from '../../commons/Footer';
 import Header from '../../commons/Header';
 import Nav from '../../commons/Nav';
@@ -56,15 +57,38 @@ export default function WebsitePageWrapper({
             />
           )}
         </Modal>
-        {menuProps.display && (
-          <Header open={isMenuOpen} onClick={() => setMenuState(!isMenuOpen)}>
+        <Box
+          display="flex"
+        >
+          <Box
+            position="fixed"
+            top="1rem"
+            right="1rem"
+            zIndex="3"
+            mobile
+          >
+            <HamburgerMenu
+              isOpen={isMenuOpen}
+              menuClicked={() => setMenuState(!isMenuOpen)}
+              width={40}
+              height={30}
+              strokeWidth={1}
+              rotate={0}
+              color="white"
+              borderRadius={0}
+              animationDuration={0.2}
+            />
+          </Box>
+          {menuProps.display && (
+          <Header open={isMenuOpen}>
             <Nav open={isMenuOpen} />
+            <Footer />
           </Header>
-        )}
-        {children}
+          )}
+          {children}
+        </Box>
         <ContactButton onClick={() => { setModalState(!isModalOpen); }} isModalOpen={isModalOpen} />
 
-        <Footer />
       </Box>
     </WebsitePageContext.Provider>
   );
