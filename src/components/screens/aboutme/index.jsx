@@ -2,7 +2,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import AboutWrapper from './style/AboutWrapper';
-import Text from '../foundation/text';
+import Text from '../../foundation/text';
 
 export default function AboutMe(repos) {
   return (
