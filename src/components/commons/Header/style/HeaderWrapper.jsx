@@ -1,27 +1,34 @@
+/* eslint-disable no-confusing-arrow */
 import styled, { css } from 'styled-components';
 import breakpointMedia from '../../../../theme/utils/breakpointMedia';
 
 const HeaderWrapper = styled.header`
-width: 100%;
+width: 20%;
 background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
+flex-direction: column;
 align-items: center;
 justify-content: space-between;
 z-index: 2;
 padding:1rem;
-position:absolute;
-
-div:nth-child(3){
-display:none;
-}
+transition: ${({ theme }) => theme.transition};
+height:100vh;
+position:fixed;
 
 ${breakpointMedia({
     sm: css`
-div:nth-child(3){
-display:flex;
-}
-        `,
+`,
     md: css`
+    /* justify-content:center; */
+position: fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background-color: rgba(0, 0, 0, 0.8);
+height:100vh;
+width:100%;
+transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-150%)'};
     `,
   })};
 `;

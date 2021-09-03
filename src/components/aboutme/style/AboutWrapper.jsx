@@ -1,17 +1,20 @@
 import styled, { css } from 'styled-components';
-import propToStyle from '../../../theme/utils/propToStyle';
 import breakpointsMedia from '../../../theme/utils/breakpointMedia';
 
 const AboutWrapper = styled.main`
-    ${propToStyle('backgroundImage')}
-    ${propToStyle('backgroundRepeat')}
-    ${propToStyle('backgroundPosition')}
-    ${propToStyle('backgroundSize')}
-
     background-color: ${({ theme }) => theme.colors.primary.main.color};
     height:100%;
     display:flex;
     align-items:center;
+    margin-left: 20%;
+
+    ${breakpointsMedia({
+    xs: css`
+    `,
+    md: css`
+        margin:0;
+    `,
+  })}
 `;
 
 AboutWrapper.TextArea = styled.div`
