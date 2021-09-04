@@ -16,6 +16,7 @@ form{
   width:100%;
   height: 75%;
   justify-content:space-between;
+  margin-bottom:50px;
 }
 
 ${breakpointsMedia({
@@ -23,6 +24,7 @@ ${breakpointsMedia({
     `,
     md: css`
     width:100%;
+    margin-bottom:50px;
     `,
   })};
 `;
