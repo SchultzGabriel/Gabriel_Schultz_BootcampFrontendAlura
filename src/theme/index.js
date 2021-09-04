@@ -3,7 +3,7 @@ import typographyVariants from './typographyVariants';
 export const colors = {
   background: {
     main: {
-      color: '#000',
+      color: '#212121',
     },
     light: {
       color: '#FFFFFF',
@@ -16,18 +16,18 @@ export const colors = {
   },
   primary: {
     main: {
-      color: '',
-      contrastText: '#D7385E',
+      color: '#000',
+      contrastText: '#64DFDF',
     },
   },
   secondary: {
     main: {
-      color: '#004058',
+      color: '#323232',
       contrastText: '#fff',
     },
     light: {
       color: '#88989E',
-      contrastText: '#FF770F',
+      contrastText: '#6930C3',
     },
   },
   tertiary: {
