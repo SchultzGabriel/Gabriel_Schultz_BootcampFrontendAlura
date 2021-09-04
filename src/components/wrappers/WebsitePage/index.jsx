@@ -5,11 +5,8 @@ import HamburgerMenu from 'react-hamburger-menu';
 import Footer from '../../commons/Footer';
 import Header from '../../commons/Header';
 import Nav from '../../commons/Nav';
-import Modal from '../../commons/Modal';
 import Box from '../../foundation/layout/Box';
-import FormCadastro from '../../patterns/ContactForm';
 import SEO from '../../commons/SEO';
-import ContactButton from '../../commons/ContactButton';
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},
@@ -42,21 +39,6 @@ export default function WebsitePageWrapper({
         flexDirection="column"
         {...pageBoxProps}
       >
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => {
-            setModalState(false);
-          }}
-        >
-          {(propsDoModal) => (
-            <FormCadastro
-              propsDoModal={propsDoModal}
-              onClose={() => {
-                setModalState(false);
-              }}
-            />
-          )}
-        </Modal>
         <Box
           display="flex"
         >
@@ -87,8 +69,6 @@ export default function WebsitePageWrapper({
           )}
           {children}
         </Box>
-        <ContactButton onClick={() => { setModalState(!isModalOpen); }} isModalOpen={isModalOpen} />
-
       </Box>
     </WebsitePageContext.Provider>
   );

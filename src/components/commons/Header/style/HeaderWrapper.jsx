@@ -4,7 +4,6 @@ import breakpointMedia from '../../../../theme/utils/breakpointMedia';
 
 const HeaderWrapper = styled.header`
 width: 20%;
-background-color: ${({ theme }) => theme.colors.primary.main.color};
 display:flex;
 flex-direction: column;
 align-items: center;

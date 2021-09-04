@@ -2,9 +2,8 @@ import React, { useCallback } from 'react';
 import { Lottie } from '@crello/react-lottie';
 import Box from '../../foundation/layout/Box';
 import TextField from '../../commons/form/TextField';
-import Text from '../../foundation/text';
 import Button from '../../commons/Button';
-import Form from './style';
+import Form from './style/FormWrapper';
 import errorAnimation from './animations/error.json';
 import doneAnimation from './animations/success.json';
 import loadingAnimation from './animations/loading.json';
@@ -25,15 +24,6 @@ function FormContent() {
     email: '',
     message: '',
   });
-
-  // function handleChange(event) {
-  //   const fieldName = event.target.getAttribute('name');
-  //   setMsgInfo({
-  //     ...msgInfo,
-  //     [fieldName]: event.target.value,
-  //   });
-  //   console.log(msgInfo);
-  // }
 
   const handleChange = useCallback(
     (event) => {
@@ -87,15 +77,6 @@ function FormContent() {
             });
         }}
       >
-        <Text
-          variant="title"
-          tag="h2"
-          color="primary.main"
-          textShadow="2px 2px 2px black"
-          margin="0"
-        >
-          Envie sua mensagem!
-        </Text>
         <div>
           <TextField
             placeholder="Nome"
@@ -116,7 +97,7 @@ function FormContent() {
         </div>
         <div>
           <TextField
-            placeholder="Mensagem"
+            placeholder="Envie sua mensagem"
             name="message"
             value={msgInfo.message}
             onChange={handleChange}
@@ -125,14 +106,15 @@ function FormContent() {
           />
         </div>
         <Button
-          variant="secondary.main"
+          variant="primary.main"
           type="submit"
           disabled={isFormInvalid}
           fullWidth
         >
           Enviar!
         </Button>
-        {isFormSubmited && submissionStatus === formStates.DONE && (
+      </form>
+      {isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
           width="100%"
           display="flex"
@@ -144,9 +126,9 @@ function FormContent() {
             config={{ animationData: doneAnimation, loop: true, autoplay: true }}
           />
         </Box>
-        )}
+      )}
 
-        {isFormSubmited && submissionStatus === formStates.ERROR && (
+      {isFormSubmited && submissionStatus === formStates.ERROR && (
         <Box
           width="100%"
           display="flex"
@@ -158,9 +140,9 @@ function FormContent() {
             config={{ animationData: errorAnimation, loop: true, autoplay: true }}
           />
         </Box>
-        )}
+      )}
 
-        {isFormSubmited && submissionStatus === formStates.LOADING && (
+      {isFormSubmited && submissionStatus === formStates.LOADING && (
         <Box
           width="100%"
           display="flex"
@@ -172,8 +154,7 @@ function FormContent() {
             config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
           />
         </Box>
-        )}
-      </form>
+      )}
     </>
   );
 }

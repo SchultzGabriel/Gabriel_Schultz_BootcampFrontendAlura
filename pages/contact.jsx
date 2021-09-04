@@ -1,19 +1,19 @@
 import React from 'react';
-import Projects from '../src/components/screens/Projects';
+import ContactPage from '../src/components/screens/ContactPage';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
-function ProjectsPage() {
+function Home() {
   return (
     <>
-      <Projects />
+      <ContactPage />
     </>
   );
 }
 
-export default websitePageHOC(ProjectsPage, {
+export default websitePageHOC(Home, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Projetos',
+      headTitle: 'Contato',
     },
   },
 });
