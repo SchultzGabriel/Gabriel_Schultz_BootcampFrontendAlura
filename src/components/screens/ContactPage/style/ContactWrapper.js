@@ -3,13 +3,11 @@ import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 
 const ContactWrapper = styled.div`
 display:flex;
-align-items: flex-start;
+align-items: center;
 width:100%;
 height:100%;
 min-height:100vh;
-padding: 1rem;
 margin-left:20%;
-padding-top:100px;
 
 ${breakpointsMedia({
     xs: css`
@@ -23,7 +21,7 @@ ${breakpointsMedia({
 `;
 
 ContactWrapper.Form = styled.div`
-height: 550px;
+height: 50%;
 width:50%;
 display: flex;
 flex-direction: column;
@@ -33,6 +31,7 @@ ${breakpointsMedia({
     xs: css`
     `,
     md: css`
+        padding-top:100px;
         margin:0;
         width:100%;
         height: 100vh;
@@ -41,12 +40,18 @@ ${breakpointsMedia({
 `;
 
 ContactWrapper.Map = styled.div`
-height: 400px;
+height: 100%;
 width:50%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+iframe{
+  border:none;
+  filter: invert(1) contrast(1) hue-rotate(180deg);
+}
+
 
 ${breakpointsMedia({
     xs: css`
