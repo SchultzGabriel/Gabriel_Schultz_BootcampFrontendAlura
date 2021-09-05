@@ -6,7 +6,7 @@ import Link from '../../foundation/link';
 import projects from '../../../../projects.json';
 
 export default function Cover() {
-  const [previewState, setPreviewState] = React.useState('');
+  const [previewState, setPreviewState] = React.useState({ image: 'https://i.imgur.com/8abs8Gx.png' });
   return (
     <ProjectWrapper>
       <Text
@@ -18,56 +18,71 @@ export default function Cover() {
       >
         PROJETOS
       </Text>
-      <Box
-        display="flex"
-        width="100%"
-        justifyContent="space-around"
-      >
-        <div className="projects">
-          {projects.projects.map((item) => (
-            <ProjectWrapper.Card
-              key={item.link}
-              onMouseEnter={() => setPreviewState(item)}
-            >
-              <Link href={item.slug}>
-                <Box
-                  display="flex"
-                  flexDirection="column"
-                  alignItems="center"
-                >
-                  <Text
-                    variant="titleXS"
-                    tag="h3"
-                    color="tertiary.light"
-                    textAlign={{
-                      md: 'center',
-                    }}
-                    textShadow="2px 2px 2px black"
-                  >
-                    {item.title}
-                  </Text>
-                  <img className="card__preview" src={item.image} alt="" />
-                  <Text
-                    variant="paragraph2"
-                    tag="p"
-                    color="tertiary.light"
-                    textAlign={{
-                      md: 'center',
-                    }}
-                    textShadow="2px 2px 2px black"
-                    className="description"
-                  >
-                    {item.description}
-                  </Text>
-                </Box>
-              </Link>
-            </ProjectWrapper.Card>
-          ))}
-        </div>
-        <ProjectWrapper.Preview>
+      <ProjectWrapper.Preview>
+        <Link
+          href={`/${previewState.slug}`}
+          className="link"
+        >
           <img className="preview" src={previewState.image} alt="" />
-        </ProjectWrapper.Preview>
-      </Box>
+          <Text
+            variant="paragraph2"
+            tag="p"
+            color="tertiary.light"
+            textAlign={{
+              md: 'center',
+            }}
+            textShadow="2px 2px 2px black"
+            className="description"
+          >
+            {previewState.description}
+          </Text>
+        </Link>
+      </ProjectWrapper.Preview>
+      <div className="projects">
+        {projects.projects.map((item) => (
+          <ProjectWrapper.Card
+            key={item.link}
+            onMouseEnter={() => setPreviewState(item)}
+          >
+            <Link href={`/${item.slug}`}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+              >
+                <img className="card__preview" src={item.image} alt="" />
+                <Text
+                  variant="titleXS"
+                  tag="h3"
+                  color="tertiary.light"
+                  textAlign={{
+                    md: 'center',
+                  }}
+                  textShadow="2px 2px 2px black"
+                >
+                  {item.title}
+                </Text>
+                <Text
+                  variant="paragraph2"
+                  tag="p"
+                  color="tertiary.light"
+                  textAlign={{
+                    md: 'center',
+                  }}
+                    // display={{
+                    //   xl: 'none',
+                    //   md: 'flex',
+                    // }}
+                  textShadow="2px 2px 2px black"
+                  className="description"
+                >
+                  {item.description}
+                </Text>
+              </Box>
+            </Link>
+          </ProjectWrapper.Card>
+        ))}
+      </div>
     </ProjectWrapper>
   );
 }
