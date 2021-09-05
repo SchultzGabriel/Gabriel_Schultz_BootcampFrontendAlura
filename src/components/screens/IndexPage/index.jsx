@@ -57,7 +57,7 @@ export default function Index() {
           com os objetivos de fixar o conteúdo aprendido durante as aulas e organizar um porfólio
           para mostrar ao mundo nossas habilidades.
           <Link
-            href="/"
+            href="/bootcamp"
             className="link"
           >
             Saiba mais sobre o Bootcamp!

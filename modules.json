@@ -1,0 +1,95 @@
+{
+    "module1": {
+        "topics": [
+            {
+                "name": "Jamtack",
+                "link": "https://jamstack.org/",
+                "icon": "/images/jamstack.png"
+            }
+        ],
+        "tools": [
+            {
+                "name": "Styled Components",
+                "link": "https://styled-components.com/",
+                "icon": "/images/styled.png"
+            },
+            {
+                "name": "Prop-Types",
+                "link": "https://www.npmjs.com/package/prop-types",
+                "icon": "/images/tool.png"
+            },
+            {
+                "name": "Lodash",
+                "link": "https://lodash.com/",
+                "icon": "/images/lodash.png"
+            },
+            {
+                "name": "ESLint",
+                "link": "https://lodash.com/",
+                "icon": "/images/eslint.svg"
+            }
+        ]
+    },
+    "module2": {
+        "topics": [
+            {
+                "name": "Git",
+                "link": "https://git-scm.com/",
+                "icon": "/images/git.png"
+            }
+        ],
+        "tools": [
+            {
+                "name": "Husky",
+                "link": "https://www.npmjs.com/package/husky",
+                "icon": "/images/husky.png"
+            },
+            {
+                "name": "Conventional Commits",
+                "link": "https://www.conventionalcommits.org/en/v1.0.0/",
+                "icon": "/images/commit.png"
+            },
+            {
+                "name": "Dependabot",
+                "link": "https://dependabot.com/",
+                "icon": "/images/dependabot.png"
+            },
+            {
+                "name": "Commitlint",
+                "link": "https://commitlint.js.org/#/",
+                "icon": "/images/clint.png"
+            }
+        ]
+    },
+    "module3": {
+        "topics": [
+            {
+                "name": "NextJS",
+                "link": "https://nextjs.org/",
+                "icon": "/images/next.png"
+            }
+        ],
+        "tools": [
+            {
+                "name": "SEO",
+                "link": "https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=pt-br",
+                "icon": "/images/seo.png"
+            },
+            {
+                "name": "NextLink",
+                "link": "https://nextjs.org/docs/api-reference/next/link",
+                "icon": "/images/link.png"
+            },
+            {
+                "name": "Data Fetching",
+                "link": "https://nextjs.org/docs/basic-features/data-fetching",
+                "icon": "/images/dataf.png"
+            },
+            {
+                "name": "Higher-Order Functions",
+                "link": "https://eloquentjavascript.net/05_higher_order.html",
+                "icon": "/images/hoc.png"
+            }
+        ]
+    }
+}

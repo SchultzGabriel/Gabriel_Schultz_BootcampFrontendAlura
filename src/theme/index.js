@@ -27,7 +27,7 @@ export const colors = {
     },
     light: {
       color: '#88989E',
-      contrastText: '#6930C3',
+      contrastText: '#DAA520',
     },
   },
   tertiary: {
