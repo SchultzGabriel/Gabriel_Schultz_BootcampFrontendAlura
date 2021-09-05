@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 
 const ProjectWrapper = styled.section`
-background: url('https://img.freepik.com/vetores-gratis/paisagem-de-fundo-retro-3d-neon-80s_8048-395.jpg?size=626&ext=jpg') center / cover no-repeat;
 display:flex;
 align-items: center;
 justify-content: space-around;

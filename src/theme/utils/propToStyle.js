@@ -30,6 +30,9 @@ function propToStyle(propName) {
         xl: {
           [propName]: propValue.xl,
         },
+        fk: {
+          [propName]: propValue.fk,
+        },
       });
     }
   };
