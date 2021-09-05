@@ -1,11 +1,11 @@
 import React from 'react';
-import Cover from '../src/components/screens/Cover';
+import IndexPage from '../src/components/screens/IndexPage';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
 function Home() {
   return (
     <>
-      <Cover />
+      <IndexPage />
     </>
   );
 }

@@ -6,6 +6,11 @@ import styled from 'styled-components';
 const Anchor = styled.a`
 color: ${({ theme }) => theme.colors.primary.main.contrastText};
 text-decoration: none;
+transition: ${({ theme }) => theme.transition};
+
+&:hover {
+    opacity: .5;
+  }
 `;
 
 // eslint-disable-next-line react/prop-types
