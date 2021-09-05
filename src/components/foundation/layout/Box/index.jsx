@@ -9,12 +9,9 @@ const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('alignItems')}
   ${propToStyle('flexWrap')}
-  ${propToStyle('backgroundImage')}
-  ${propToStyle('backgroundRepeat')}
-  ${propToStyle('backgroundPosition')}
-  ${propToStyle('backgroundSize')}
   ${propToStyle('width')}
   ${propToStyle('height')}
+  ${propToStyle('margin')}
   ${propToStyle('position')}
   ${propToStyle('top')}
   ${propToStyle('right')}
