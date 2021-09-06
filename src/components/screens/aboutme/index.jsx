@@ -4,19 +4,14 @@ import React from 'react';
 import AboutWrapper from './style/AboutWrapper';
 import Text from '../../foundation/text';
 
-export default function AboutMe(repos) {
+export default function AboutMe() {
   return (
-    <AboutWrapper
-      // backgroundImage="url(/images/aboutBackground.jpg)"
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="right"
-    >
+    <AboutWrapper>
       <AboutWrapper.TextArea>
         <Text
           variant="title"
           tag="h1"
-          color="tertiary.light"
+          color="secondary.main"
           textAlign={{
             md: 'center',
           }}
@@ -28,43 +23,31 @@ export default function AboutMe(repos) {
         <Text
           variant="paragraph1"
           tag="p"
-          color="secondary.light"
+          color="secondary.main"
           textAlign={{
-            md: 'center',
+            fk: 'justify',
           }}
           margin="1rem"
           textShadow="2px 3px 1px black"
         >
-          Moro em Porto Alegre - RS, sou professor de biologia e
-          um apaixonado pelo ensino e pela ciência.
+          Moro em Sertão Santana, interior do Rio Grande do Sul. Desde pequeno sou curioso
+          sobre tudo e adoro construir engenhocas com engenharia eletrônica freestyle.
           <br />
           <br />
-          Tenho como motivação ajudar a transformar a educação
-          brasileira através da tecnologia. Para isso, conto com uma sede
-          insaciável de cohecimento e a arte de ensinar para meus semelhantes.
+          Formado em Biologia, atuei na área da educação até o início da pandemia, migrando
+          para a área de tecnologia assim que tive oportunidade, mas não abandonando o sonho de
+          atuar na área com as habilidades de bom comunicador que sou.
+          <br />
+          <br />
+          Apaixonado pelos estudos e leiura, não há nada que não desperte meu interesse.
+          Nos últimos meses como estudante de tecnologia, venho me deparando com mudanças pessoais
+          intensas que me impedem de listar o quão sou bom em N ferramentas ou habilidades,
+          pois quanto mais estudo, mais longe do fim do caminho eu me vejo.
         </Text>
-        <Text
-          variant="subTitle"
-          tag="p"
-          color="tertiary.light"
-          textAlign={{
-            md: 'center',
-          }}
-          margin="1rem"
-          textShadow="2px 3px 1px black"
-        >
-          Meus repositórios:
-        </Text>
-        <AboutWrapper.RepoList>
-          {repos.repos.map((itemAtual) => (
-            <li key={itemAtual.id}>
-              <a target="_blank" href={itemAtual.html_url} rel="noreferrer">
-                <span>{itemAtual.name}</span>
-              </a>
-            </li>
-          ))}
-        </AboutWrapper.RepoList>
       </AboutWrapper.TextArea>
+      <AboutWrapper.PhotoArea>
+        <img src="/images/eu.jpg" alt="" />
+      </AboutWrapper.PhotoArea>
     </AboutWrapper>
   );
 }
