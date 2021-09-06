@@ -1,32 +1,30 @@
 import React from 'react';
+import { Lottie } from '@crello/react-lottie';
 import Box from '../../foundation/layout/Box';
-import Text from '../../foundation/text';
+import Link from '../../foundation/link';
+import errorAnimation from './animations/error.json';
 
 export default function Erro404() {
   return (
 
     <Box
-      backgroundImage="url(/images/cover.jpg)"
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center"
       display="flex"
+      flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      width="100%"
       height="100vh"
     >
-      <Text
-        variant="title"
-        tag="p"
-        color="tertiary.light"
-        textAlign={{
-          xs: 'center',
-          md: 'center',
-        }}
-        textShadow="2px 2px 2px black"
+      <Lottie
+        width="70%"
+        height="70%"
+        config={{ animationData: errorAnimation, loop: true, autoplay: true }}
+      />
+      <Link
+        href="/"
       >
-        404
-      </Text>
+        Voltar ao início!
+      </Link>
     </Box>
 
   );

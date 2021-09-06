@@ -2,10 +2,12 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 
 const AboutWrapper = styled.main`
-    background-color: ${({ theme }) => theme.colors.primary.main.color};
+    width:100%;
+    min-height: 100vh;
     height:100%;
     display:flex;
     align-items:center;
+    justify-content: space-around;
     margin-left: 20%;
 
     ${breakpointsMedia({
@@ -20,8 +22,9 @@ const AboutWrapper = styled.main`
 AboutWrapper.TextArea = styled.div`
     display:flex;
     flex-direction:column;
-
     width:50%;
+
+
 ${breakpointsMedia({
     xs: css`
     `,
@@ -31,26 +34,22 @@ ${breakpointsMedia({
   })}
 `;
 
-AboutWrapper.RepoList = styled.ul`
-display:flex;
-flex-flow: column wrap;
+AboutWrapper.PhotoArea = styled.div`
+    width:40%;
+    padding:1rem;
 
-ul{
-    margin:0;
-}
-a{
-    text-decoration:none;
-    color: ${({ theme }) => theme.colors.primary.main.contrastText};
-    text-shadow: 2px 3px 1px black;
-    transition: ${({ theme }) => theme.transition};
-}
-a:hover{
-    color: ${({ theme }) => theme.colors.secondary.main.contrastText};
-}
-li{
-    margin:10px;
-    list-style:none;
-}
+    img{
+        width:100%;
+        border-radius: 50%;
+    }
+
+    ${breakpointsMedia({
+    xs: css`
+    `,
+    md: css`
+        display:none;
+    `,
+  })}
 `;
 
 export { AboutWrapper as default };
