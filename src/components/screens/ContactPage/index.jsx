@@ -8,14 +8,13 @@ export default function ContactPage() {
     <ContactWrapper>
       <ContactWrapper.Form>
         <Text
-          variant="subtitle"
-          tag="h2"
+          variant="title"
+          tag="h1"
           color="secondary.main"
-          alignSelf="center"
           margin="1rem"
           textShadow="2px 2px 2px black"
         >
-          Contato
+          CONTATO
         </Text>
         <FormCadastro />
       </ContactWrapper.Form>
