@@ -24,6 +24,15 @@ const IndexWrapper = styled.main`
 IndexWrapper.TextArea = styled.div`
 width:50%;
 height:100%;
+padding:1rem;
+
+${breakpointsMedia({
+    xs: css`
+    `,
+    md: css`
+        width:100%;
+    `,
+  })}
 `;
 
 export { IndexWrapper as default };
