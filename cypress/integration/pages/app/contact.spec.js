@@ -6,8 +6,8 @@ describe('/pages/contact/', () => {
     cy.visit('/contact/');
 
     // preencher o input usuario
-    document.querySelector('input[name="name"]');
-    cy.get('input[name="name"]').type('Gabreu');
+    document.querySelector('input[name="user"]');
+    cy.get('input[name="user"]').type('Gabreu');
 
     cy.get('input[name="email"]').type('gabreu@email.com');
 
