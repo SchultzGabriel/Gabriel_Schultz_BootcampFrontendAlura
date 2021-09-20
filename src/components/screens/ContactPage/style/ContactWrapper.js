@@ -7,7 +7,7 @@ align-items: center;
 width:100%;
 height:100%;
 min-height:100vh;
-margin-left:20%;
+margin-left:10%;
 
 ${breakpointsMedia({
     xs: css`
@@ -16,25 +16,28 @@ ${breakpointsMedia({
         height:auto;
         margin:0;
         flex-direction: column;
+        justify-content: center;
     `,
   })}
 `;
 
 ContactWrapper.Form = styled.div`
-height: 50%;
+height: 100vh;
 width:50%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+padding:50px;
+
 
 ${breakpointsMedia({
     xs: css`
     `,
     md: css`
-        padding-top:100px;
         margin:0;
         width:100%;
         height: 100vh;
+        padding:10px;
     `,
   })}
 `;

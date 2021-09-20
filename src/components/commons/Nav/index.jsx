@@ -2,23 +2,23 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import NavWrapper from './style/NavWrapper';
-import Button from '../Button';
+import Link from '../../foundation/link';
 
 const links = [
   {
-    text: 'início',
+    text: 'Início',
     link: '/',
   },
   {
-    text: 'projetos',
+    text: 'Projetos',
     link: '/projects',
   },
   {
-    text: 'sobre',
+    text: 'Sobre',
     link: '/about',
   },
   {
-    text: 'contato',
+    text: 'Contato',
     link: '/contact',
   },
 ];
@@ -34,24 +34,19 @@ export default function Nav({ ...open }) {
   return (
     <NavWrapper open={isMenuOpen}>
       {isMenuOpen && <LockScroll />}
-      {links.map((link) => (
-        <Button
-          href={link.link}
-          variant="primaty.main"
-          key={link.text}
-        >
-          {link.text}
-        </Button>
-
-      ))}
+      <ul>
+        {links.map((link) => (
+          <li key={link.text}>
+            <Link
+              href={link.link}
+              variant="primaty.main"
+              nav
+            >
+              {link.text}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </NavWrapper>
   );
 }
-
-// Nav.defaultProps = {
-//   onclick: 'true',
-// };
-
-// Nav.propTypes = {
-//   onclick: PropTypes.bool,
-// }

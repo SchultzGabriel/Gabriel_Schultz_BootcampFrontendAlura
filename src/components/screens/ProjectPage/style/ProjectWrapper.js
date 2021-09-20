@@ -7,9 +7,8 @@ align-items: center;
 justify-content: space-around;
 height:100vh;
 width:100%;
-padding: 1rem;
-padding-top: 100px;
-margin-left: 20%;
+padding: 50px;
+margin-left: 10%;
 
 img{
     width:50%;
@@ -37,7 +36,7 @@ ProjectWrapper.TextArea = styled.div`
     flex-direction:column;
     justify-content: space-around;
     width:50%;
-    padding-left:1rem;
+    padding: 50px;
     flex-shrink: 0;
 
 ${breakpointsMedia({

@@ -3,9 +3,8 @@ import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 
 const IndexWrapper = styled.main`
     display:flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    margin-left: 20%;
+    padding:50px;
+    margin-left: 10%;
     padding-top: 100px;
     height:100%;
     min-height:100vh;

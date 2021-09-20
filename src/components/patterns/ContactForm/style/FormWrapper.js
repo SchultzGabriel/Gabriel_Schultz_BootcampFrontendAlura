@@ -4,6 +4,8 @@ import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 const Form = styled.section`
 display:flex;
 flex-direction: column;
+align-items: flex-start;
+justify-content:space-between;
 padding:1rem;
 width:100%;
 height:100%;
@@ -13,10 +15,10 @@ transition: ${({ theme }) => theme.transition};
 form{
   display:flex;
   flex-direction: column;
-  width:100%;
-  height: 75%;
   justify-content:space-between;
-  margin-bottom:50px;
+  width:100%;
+  height: 65%;
+  margin-bottom:auto;
 }
 
 ${breakpointsMedia({

@@ -6,7 +6,6 @@ import Link from '../../foundation/link';
 import projects from '../../../../projects.json';
 
 export default function Cover() {
-  const [previewState, setPreviewState] = React.useState({ image: 'https://i.imgur.com/8abs8Gx.png' });
   return (
     <ProjectWrapper>
       <Text
@@ -14,35 +13,16 @@ export default function Cover() {
         tag="h2"
         color="tertiary.light"
         textAlign="center"
+        margin="0"
         textShadow="2px 2px 2px black"
       >
         PROJETOS
       </Text>
-      <ProjectWrapper.Preview>
-        <Link
-          href={`/${previewState.slug}`}
-          className="link"
-        >
-          <img className="preview" src={previewState.image} alt="" />
-          <Text
-            variant="paragraph2"
-            tag="p"
-            color="tertiary.light"
-            textAlign={{
-              md: 'center',
-            }}
-            textShadow="2px 2px 2px black"
-            className="description"
-          >
-            {previewState.description}
-          </Text>
-        </Link>
-      </ProjectWrapper.Preview>
       <div className="projects">
         {projects.projects.map((item) => (
           <ProjectWrapper.Card
             key={item.link}
-            onMouseEnter={() => setPreviewState(item)}
+            onMouseEnter={() => {}}
           >
             <Link href={`/${item.slug}`}>
               <Box
@@ -59,6 +39,7 @@ export default function Cover() {
                     md: 'center',
                   }}
                   textShadow="2px 2px 2px black"
+                  className="title"
                 >
                   {item.title}
                 </Text>

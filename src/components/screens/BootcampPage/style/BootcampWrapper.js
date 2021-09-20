@@ -4,8 +4,8 @@ import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 const IndexWrapper = styled.main`
     display:flex;
     flex-direction: column;
-    margin-left: 20%;
-    padding-top: 100px;
+    margin-left: 10%;
+    padding:50px;
     height:100%;
     min-height:100vh;
     width:100%;

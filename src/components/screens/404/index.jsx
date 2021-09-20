@@ -14,9 +14,10 @@ export default function Erro404() {
       justifyContent="center"
       width="100%"
       height="100vh"
+      margin="0 0 0 10%"
     >
       <Lottie
-        width="70%"
+        width="100%"
         height="70%"
         config={{ animationData: errorAnimation, loop: true, autoplay: true }}
       />
