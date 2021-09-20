@@ -1,4 +1,9 @@
 const typographyVariants = {
+  coverTitle: {
+    fontSize: '70px',
+    fontWeight: '300',
+    lineHeight: 1.25, // 125%
+  },
   title: {
     fontSize: '32px',
     fontWeight: '700',

@@ -6,7 +6,7 @@ display:flex;
 flex-direction: column;
 align-items:center;
 justify-content: space-around;
-flex-shrink:0;
+/* flex-shrink:0; */
 width:100%;
 height:50%;
 

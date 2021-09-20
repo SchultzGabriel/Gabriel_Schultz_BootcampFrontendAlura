@@ -9,13 +9,13 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
+flex-shrink: 0;
 z-index: 2;
-padding:1rem 0 1rem 0;
 transition: ${({ theme }) => theme.transition};
 height:100vh;
 position:fixed;
 border-right: 1px solid ${({ theme }) => theme.colors.borders.main.color};
-
+padding:1rem 0 1rem 0;
 
 ${breakpointMedia({
     sm: css`
