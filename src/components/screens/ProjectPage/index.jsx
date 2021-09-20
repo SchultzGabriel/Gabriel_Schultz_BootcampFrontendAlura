@@ -11,7 +11,6 @@ export default function ProjectScreen({ project }) {
     <ProjectWrapper
       display="flex"
     >
-      <img src={project.image} alt="" />
       <ProjectWrapper.TextArea>
         <Text
           variant="title"
@@ -35,6 +34,7 @@ export default function ProjectScreen({ project }) {
           Visite o repositório
         </Button>
       </ProjectWrapper.TextArea>
+      <img src={project.image} alt="" />
     </ProjectWrapper>
   );
 }

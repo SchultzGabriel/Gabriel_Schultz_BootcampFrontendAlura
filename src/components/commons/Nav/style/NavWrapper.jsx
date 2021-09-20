@@ -1,6 +1,5 @@
 /* eslint-disable no-confusing-arrow */
-import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
+import styled from 'styled-components';
 
 const NavWrapper = styled.nav`
 display:flex;
@@ -8,40 +7,43 @@ flex-direction: column;
 align-items:center;
 justify-content: space-around;
 flex-shrink:0;
-width:auto;
-height:70%;
+width:100%;
+height:50%;
 
-
-${breakpointsMedia({
-    sm: css`
-
-`,
-    md: css`
-width:auto;
-    `,
-  })};
-`;
-
-NavWrapper.Anchor = styled.button`
-/* margin-left: 1rem; */
-background-color: ${({ theme }) => theme.colors.secondary.main.color};
-color: ${({ theme }) => theme.colors.primary.main.contrastText};
-
-&&:hover{
-    transition: ${({ theme }) => theme.transition};
-    filter:opacity(.5);
-    cursor:pointer;
+ul{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  height: 100%;
+  width:100%;
+  padding:0;
 }
 
-${breakpointsMedia({
-    xs: css`
-    `,
-    md: css`
-    margin-bottom: 1rem;
-    width: 120px;
-    
-    `,
-  })};
+li{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  height:100%;
+  list-style:none;
+  align-self: flex-start;
+  border-top: 1px solid ${({ theme }) => theme.colors.borders.main.color};
+}
+
+li:last-child{
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borders.main.color};
+}
+
+a{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  height:100%;
+}
 `;
 
 export { NavWrapper as default };

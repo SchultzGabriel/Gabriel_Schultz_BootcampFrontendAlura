@@ -21,14 +21,12 @@ FooterWrapper.Icon = styled.div`
 display:flex;
 align-items:center;
 justify-content: center;
-/* width:30%; */
-height:auto;
+width:30%;
 
 a{
     display: flex;
     justify-content: center;
     width: 30%;
-    margin: 1rem;
 }
 a:hover{
     transition: ${({ theme }) => theme.transition};
@@ -38,7 +36,7 @@ a:hover{
 img{
     filter: invert();
     height: inherit;
-    width:100%;
+    width:20px;
 }
 `;
 

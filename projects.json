@@ -3,23 +3,44 @@
       {
         "image": "https://i.imgur.com/OuW7vVT.png",
         "title": "Instalura",
-        "description": "Em desenvolvimento durante o bootcamp de frontend avançado da Alura.",
+        "description": "Em desenvolvimento durante o bootcamp JAMStack da Alura. Engloba um kit completo de ferramentas aprendidas, desde o ReactJS até testes integrados com Jest e Cypress.",
         "link": "https://github.com/SchultzGabriel/instalura",
         "slug": "instalura"
       },
       {
         "image": "https://i.imgur.com/2WDbNZ0.png",
         "title": "Alurawiki",
-        "description": "Desenvolvido durante a Imersão React, ainda resolvendo alguns bugs.",
+        "description": "Desenvolvido durante a Imersão React, ainda resolvendo alguns bugs. Meus primeiros passos em algum framework, e porta de entrada para os estudos de JAMStack.",
         "link": "https://github.com/SchultzGabriel/alurawiki",
         "slug": "alurawiki"
       },
       {
         "image": "https://i.imgur.com/zr22NV7.png",
         "title": "Aluradev",
-        "description": "Feito durante o challenge de frontend da Alura, não ficou 100% funcional e agora estou reconstruindo em ReactJS.",
+        "description": "Feito durante o challenge de frontend da Alura, não ficou 100% funcional e agora estou reconstruindo em ReactJS. Bastante incompleto.",
         "link": "https://github.com/SchultzGabriel/aluradev",
         "slug": "aluradev"
+      },
+      {
+        "image": "https://i.imgur.com/VZgnc5h.png",
+        "title": "Aluralunos",
+        "description": "Um projeto de vários alunos do Bootcamp de front-end avançado para auxiliar iniciantes no mundo da programação. O projeto contêm um compilado de links úteis e dicas de estudo.",
+        "link": "https://github.com/SchultzGabriel/Aluralunos",
+        "slug": "aluralunos"
+      },
+      {
+        "image": "https://i.imgur.com/kIZjmVf.png",
+        "title": "Este Portfólio",
+        "description": "Repositório da página em que você se encontra. Visa fixar o conteúdo aprendido no Bootcamp JAMStack da Alura, junto com o Intalura.",
+        "link": "https://github.com/SchultzGabriel/portfolio",
+        "slug": "portfolio"
+      },
+      {
+        "image": "https://i.imgur.com/uKYYuZE.png",
+        "title": "Imersão.dev 3",
+        "description": "Projeto realizado durante a imersão.dev 3 da Alura, possuindo uma calculadora. um conversor de moedas, e um compilado de filmes(Aluraflix).",
+        "link": "https://github.com/SchultzGabriel/imersao.dev",
+        "slug": "imersao"
       }
     ]
   }

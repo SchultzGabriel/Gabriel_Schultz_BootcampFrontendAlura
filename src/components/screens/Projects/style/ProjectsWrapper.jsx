@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/utils/breakpointMedia';
 
 const ProjectWrapper = styled.div`
-    /* background: url('https://i.pinimg.com/originals/8d/00/fd/8d00fda1d4a11f3b0980490764a9cb94.jpg') center / cover no-repeat; */
-    padding:1rem;
+    padding:50px;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
@@ -11,24 +10,28 @@ const ProjectWrapper = styled.div`
     width:100%;
     min-height:100vh;
     height:100%;
-    margin-left: 20%;
+    margin-left: 10%;
 
     ${breakpointsMedia({
     md: css`
     margin:0;
+    padding:10px;
     `,
   })}
 
     .projects{
         display:flex;
         justify-content: space-around;
+        flex-wrap:wrap;
         width:100%;
+        height:100%;
 
     ${breakpointsMedia({
     md: css`
     padding: 1rem;
     margin:0;
     width:100%;
+    flex-wrap:nowrap;
     height:100%;
     flex-direction:column;
     `,
@@ -37,27 +40,26 @@ const ProjectWrapper = styled.div`
 `;
 
 ProjectWrapper.Card = styled.div`
+    /* margin:0 50px 30px 0; */
+    width:30%;
+    height:50%;
     transition: ${({ theme }) => theme.transition};
+    position:relative;
     display:flex;
 
-    &:hover{
-        box-shadow: 0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;;
-    }
-    
     a{
         text-decoration:none;
         align-items:center;   
-        display:flex;
+        display:inline-flex;
         justify-content:space-around;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding:1rem;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+    }
+
+    .title{
+        transition: ${({ theme }) => theme.transition};
+        position:absolute;
+        top:40%;
+        visibility:hidden;
     }
 
     .description{
@@ -66,9 +68,20 @@ ProjectWrapper.Card = styled.div`
     
 
     .card__preview{
-        /* width:10%; */
-        display:none;
+        transition: ${({ theme }) => theme.transition};
+        width:100%;
     };
+
+    &:hover{
+        .title{
+        visibility: visible;
+        transition: ${({ theme }) => theme.transition};
+    }
+    .card__preview{
+        opacity:.5;
+    };
+
+    }
 
     ${breakpointsMedia({
     md: css`
@@ -83,6 +96,11 @@ ProjectWrapper.Card = styled.div`
         padding:0;
     }
 
+    .title{
+        position:static;
+        visibility: visible;
+    }
+
     .card__preview{
         display:flex;
         width:100%;
@@ -92,37 +110,6 @@ ProjectWrapper.Card = styled.div`
         text-align:justify;
         padding:1rem;
     }
-    `,
-  })}
-`;
-
-ProjectWrapper.Preview = styled.div`
-display: flex;
-flex-direction:column;
-align-items: center;
-justify-content:center;
-align-self: center;
-width:100%;
-height:100%;
-transition: ${({ theme }) => theme.transition};
-margin-bottom:auto;
-
-.link{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content:center;
-}
-
-.preview{
-        height:350px;
-        /* width:50%; */
-        align-self: center;
-    };
-
-    ${breakpointsMedia({
-    md: css`
-    display:none;
     `,
   })}
 `;

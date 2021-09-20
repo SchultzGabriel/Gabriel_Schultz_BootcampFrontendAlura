@@ -121,48 +121,49 @@ export default function ContactForm({ onSubmit }) {
         >
           Enviar!
         </Button>
-        {isFormSubmited && submissionStatus === formStates.DONE && (
+      </form>
+
+      {isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
           width="100%"
           display="flex"
           justifyContent="center"
         >
           <Lottie
-            width="150px"
-            height="150px"
+            width="100px"
+            height="100px"
             config={{ animationData: doneAnimation, loop: false, autoplay: true }}
           />
         </Box>
-        )}
+      )}
 
-        {isFormSubmited && submissionStatus === formStates.ERROR && (
+      {isFormSubmited && submissionStatus === formStates.ERROR && (
         <Box
           width="100%"
           display="flex"
           justifyContent="center"
         >
           <Lottie
-            width="150px"
-            height="150px"
+            width="100px"
+            height="100px"
             config={{ animationData: errorAnimation, loop: false, autoplay: true }}
           />
         </Box>
-        )}
+      )}
 
-        {isFormSubmited && submissionStatus === formStates.LOADING && (
+      {isFormSubmited && submissionStatus === formStates.LOADING && (
         <Box
           width="100%"
           display="flex"
           justifyContent="center"
         >
           <Lottie
-            width="150px"
-            height="150px"
+            width="100px"
+            height="100px"
             config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
           />
         </Box>
-        )}
-      </form>
+      )}
     </Form>
   );
 }
