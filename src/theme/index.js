@@ -72,5 +72,5 @@ export default {
   breakpoints,
   borderRadius: '12px',
   transition: '200ms ease-in-out',
-  fontFamily: '\'Roboto\', sans-serif',
+  fontFamily: '\'Work Sans\', sans-serif',
 };

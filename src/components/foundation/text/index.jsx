@@ -5,6 +5,11 @@ import PropTypes from 'prop-types';
 import propToStyle from '../../../theme/utils/propToStyle';
 
 export const TextStyleVariantsMap = {
+  coverTitle: css`
+    font-size: ${({ theme }) => theme.typographyVariants.coverTitle.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.coverTitle.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.coverTitle.lineHeight};
+  `,
   title: css`
     font-size: ${({ theme }) => theme.typographyVariants.title.fontSize};
     font-weight: ${({ theme }) => theme.typographyVariants.title.fontWeight};
