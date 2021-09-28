@@ -1,11 +1,15 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProjectWrapper from './style/ProjectsWrapper';
 import Text from '../../foundation/text';
 import Box from '../../foundation/layout/Box';
 import Link from '../../foundation/link';
-import projects from '../../../../projects.json';
+// import projects from '../../../../projects.json';
 
-export default function Cover() {
+export { getContent } from './getContent';
+
+export default function Cover({ projects }) {
   return (
     <ProjectWrapper>
       <Text
@@ -19,7 +23,7 @@ export default function Cover() {
         PROJETOS
       </Text>
       <div className="projects">
-        {projects.projects.map((item) => (
+        {projects.allProjetos.map((item) => (
           <ProjectWrapper.Card
             key={item.link}
             onMouseEnter={() => {}}
@@ -67,3 +71,8 @@ export default function Cover() {
     </ProjectWrapper>
   );
 }
+
+Cover.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  projects: PropTypes.object.isRequired,
+};
