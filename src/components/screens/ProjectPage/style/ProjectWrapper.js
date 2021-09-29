@@ -20,11 +20,12 @@ ${breakpointsMedia({
     `,
     md: css`
     flex-direction: column;
-    padding-top: 110px;
+    padding-top: 150px;
     margin:0;
     
     img{
         width:100%;
+        order:-1;
     }
     `,
   })}
