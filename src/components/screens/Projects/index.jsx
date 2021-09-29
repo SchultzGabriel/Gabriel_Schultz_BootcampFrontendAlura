@@ -23,7 +23,7 @@ export default function Cover({ projects }) {
         PROJETOS
       </Text>
       <div className="projects">
-        {projects.allProjetos.map((item) => (
+        {projects.allProjetos.reverse().map((item) => (
           <ProjectWrapper.Card
             key={item.link}
             onMouseEnter={() => {}}

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
-import HamburgerMenu from 'react-hamburger-menu';
+import HamburgerMenuButton from 'react-hamburger-menu';
 import Footer from '../../commons/Footer';
 import Header from '../../commons/Header';
 import Nav from '../../commons/Nav';
@@ -16,7 +16,6 @@ export default function WebsitePageWrapper({
   children,
   seoProps,
   pageBoxProps,
-  menuProps,
 }) {
   const [isModalOpen, setModalState] = React.useState(false);
   const [isMenuOpen, setMenuState] = React.useState(false);
@@ -49,7 +48,7 @@ export default function WebsitePageWrapper({
             zIndex="3"
             mobile
           >
-            <HamburgerMenu
+            <HamburgerMenuButton
               isOpen={isMenuOpen}
               menuClicked={() => setMenuState(!isMenuOpen)}
               width={40}
@@ -61,12 +60,10 @@ export default function WebsitePageWrapper({
               animationDuration={0.2}
             />
           </Box>
-          {menuProps.display && (
           <Header open={isMenuOpen}>
             <Nav open={isMenuOpen} />
             <Footer />
           </Header>
-          )}
           {children}
         </Box>
       </Box>
@@ -77,17 +74,11 @@ export default function WebsitePageWrapper({
 WebsitePageWrapper.defaultProps = {
   seoProps: {},
   pageBoxProps: {},
-  menuProps: {
-    display: true,
-  },
 };
 
 WebsitePageWrapper.propTypes = {
   seoProps: PropTypes.shape({
     headTitle: PropTypes.string,
-  }),
-  menuProps: PropTypes.shape({
-    display: PropTypes.bool,
   }),
   pageBoxProps: PropTypes.shape({
     backgroundImage: PropTypes.string,

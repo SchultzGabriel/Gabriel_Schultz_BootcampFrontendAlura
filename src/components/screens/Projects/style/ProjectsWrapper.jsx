@@ -15,7 +15,7 @@ const ProjectWrapper = styled.div`
     ${breakpointsMedia({
     md: css`
     margin:0;
-    padding:10px;
+    padding:60px 10px 10px 10px;
     `,
   })}
 
@@ -28,7 +28,7 @@ const ProjectWrapper = styled.div`
 
     ${breakpointsMedia({
     md: css`
-    padding: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
     margin:0;
     width:100%;
     flex-wrap:nowrap;
@@ -52,7 +52,6 @@ ProjectWrapper.Card = styled.div`
         align-items:center;   
         display:inline-flex;
         justify-content:space-around;
-        /* background-color: rgba(0, 0, 0, 0.5); */
     }
 
     .title{
